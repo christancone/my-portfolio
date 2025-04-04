@@ -99,45 +99,40 @@ const about = {
     title: "Work Experience",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "Ascentis Technologies",
+        timeframe: "2025 - Present",
+        role: "Full Stack Developer",
         achievements: [
           <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20%
-            increase in user engagement and 30% faster load times.
+            Developed <a href="http://simpleemailsignature.com" target="_blank" rel="noopener noreferrer">simpleemailsignature.com</a>, 
+            a fully responsive web app that enables users to generate and customize professional email signatures with ease. 
+            Built using <strong>Next.js</strong>, <strong>React</strong>, and <strong>Tailwind CSS</strong>, the platform supports dynamic template rendering, real-time previews, and export features — all optimized for performance and user experience.
           </>,
           <>
-            Spearheaded the integration of AI tools into design workflows,
-            enabling designers to iterate 50% faster.
+            Engineered <a href="https://photos-ventouxsummit.fr" target="_blank" rel="noopener noreferrer">photos-ventouxsummit.fr</a>, 
+            an automated photo delivery platform for cyclists reaching the summit of Mont Ventoux. 
+            Integrated with <strong>PrestaShop</strong> to manage user purchases and downloads, and used <strong>Node.js</strong>, <strong>Express</strong>, and <strong>MySQL</strong> for the backend. 
+            Combined timestamp and license plate logic to automate photo distribution, reducing manual effort by 90%.
           </>,
-        ],
+        ]
+        ,
         images: [
           // optional: leave the array empty if you don't want to display images
           {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
+            src: "/images/Project Screenshots/Simple Mail Signature/Screenshot 2025-03-16 050701.png",
+            alt: "http://simpleemailsignature.com",
+            width: 16,
+            height: 9,
+          },
+          {
+            src: "/images/Project Screenshots/photos-ventouxsummit.fr/Screenshot 2025-04-04 230908.png",
+            alt: "https://photos-ventouxsummit.fr",
             width: 16,
             height: 9,
           },
         ],
       },
-      {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
-        achievements: [
-          <>
-            Developed a design system that unified the brand across multiple
-            platforms, improving design consistency by 40%.
-          </>,
-          <>
-            Led a cross-functional team to launch a new product line,
-            contributing to a 15% increase in overall company revenue.
-          </>,
-        ],
-        images: [],
-      },
+      
     ],
   },
   studies: {
@@ -152,47 +147,128 @@ const about = {
     ],
   },
   technical: {
-    display: true, // set to false to hide this section
+    display: true,
     title: "Technical skills",
     skills: [
       {
-        title: "Figma",
+        title: "React & Next.js",
         description: (
-          <>Able to prototype in Figma with Once UI with unnatural speed.</>
+          <>
+            Built modern SPAs and server-rendered apps using <strong>React</strong> and <strong>Next.js</strong>. 
+            Used in: 
+            <a href="https://www.simpleemailsignature.com" target="_blank" rel="noopener noreferrer"> Simple Email Signature</a>,{" "}
+            <a href="https://github.com/christancone/project1" target="_blank" rel="noopener noreferrer">TinyToes</a>,{" "}
+            <a href="https://github.com/christancone/AuctionSite" target="_blank" rel="noopener noreferrer">BestBid</a>,{" "}
+            <a href="https://github.com/christancone/domainTest" target="_blank" rel="noopener noreferrer">DomainLK</a>.
+            <br />
+            <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react" />
+            <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js" />
+          </>
         ),
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-          {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
+        images: [],
       },
       {
-        title: "Next.js",
+        title: "Tailwind CSS",
         description: (
-          <>Building next gen apps with Next.js + Once UI + Supabase.</>
+          <>
+            Used <strong>Tailwind CSS</strong> to build responsive, mobile-first UIs quickly. 
+            Applied in: 
+            <a href="https://www.simpleemailsignature.com" target="_blank" rel="noopener noreferrer"> Simple Email Signature</a>,{" "}
+            <a href="https://github.com/christancone/project1" target="_blank" rel="noopener noreferrer">TinyToes</a>,{" "}
+            <a href="https://github.com/christancone/AuctionSite" target="_blank" rel="noopener noreferrer">BestBid</a>,{" "}
+            <a href="https://github.com/christancone/domainTest" target="_blank" rel="noopener noreferrer">DomainLK</a>.
+            <br />
+            <img src="https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwind-css" />
+          </>
         ),
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
+        images: [],
+      },
+      {
+        title: "Supabase",
+        description: (
+          <>
+            Integrated <strong>Supabase</strong> into 
+            <a href="https://www.simpleemailsignature.com" target="_blank" rel="noopener noreferrer"> Simple Email Signature </a> 
+            for real-time user data storage and profile image uploads.
+            <br />
+            <img src="https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase" />
+          </>
+        ),
+        images: [],
+      },
+      {
+        title: "PrestaShop Webservice API",
+        description: (
+          <>
+            Used the <strong>PrestaShop API</strong> to authenticate users and manage cart/customer data in 
+            <a href="https://photos-ventouxsummit.fr" target="_blank" rel="noopener noreferrer"> Ventoux Photo Delivery Platform</a>.
+            <br />
+            <img src="https://img.shields.io/badge/PrestaShop-DF0067?style=for-the-badge&logo=prestashop" />
+            <img src="https://img.shields.io/badge/API-005571?style=for-the-badge&logo=api" />
+          </>
+        ),
+        images: [],
+      },
+      {
+        title: "Django & PostgreSQL",
+        description: (
+          <>
+            Developed full-stack web apps with <strong>Django</strong> and <strong>PostgreSQL</strong> in 
+            <a href="https://github.com/christancone/AuctionSite" target="_blank" rel="noopener noreferrer"> BestBid</a>.
+            <br />
+            <img src="https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django" />
+            <img src="https://img.shields.io/badge/PostgreSQL-336791?style=for-the-badge&logo=postgresql" />
+          </>
+        ),
+        images: [],
+      },
+      {
+        title: "Java, JSP & MySQL",
+        description: (
+          <>
+            Built backend and UI logic using <strong>Java</strong>, <strong>JSP</strong>, and <strong>MySQL</strong> in 
+            <a href="https://github.com/christancone/EpicReads" target="_blank" rel="noopener noreferrer"> EpicReads </a> 
+            and <a href="https://github.com/christancone/Renew" target="_blank" rel="noopener noreferrer"> Renew</a>.
+            <br />
+            <img src="https://img.shields.io/badge/Java-007396?style=for-the-badge&logo=java" />
+            <img src="https://img.shields.io/badge/JSP-FF1709?style=for-the-badge" />
+            <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql" />
+          </>
+        ),
+        images: [],
+      },
+      {
+        title: "HTML, CSS & JavaScript",
+        description: (
+          <>
+            Core technologies for UI development in 
+            <a href="https://github.com/christancone/EpicReads" target="_blank" rel="noopener noreferrer"> EpicReads </a>,{" "}
+            <a href="https://github.com/christancone/Renew" target="_blank" rel="noopener noreferrer"> Renew</a>, and{" "}
+            <a href="https://github.com/christancone/domainTest" target="_blank" rel="noopener noreferrer">DomainLK</a>.
+            <br />
+            <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5" />
+            <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3" />
+            <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript" />
+          </>
+        ),
+        images: [],
+      },
+      {
+        title: "Figma",
+        description: (
+          <>
+            Designed wireframes and UX flows in <strong>Figma</strong> during planning of 
+            <a href="https://github.com/christancone/domainTest" target="_blank" rel="noopener noreferrer"> DomainLK </a> 
+            and <a href="https://www.simpleemailsignature.com" target="_blank" rel="noopener noreferrer"> Simple Email Signature</a>.
+            <br />
+            <img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma" />
+          </>
+        ),
+        images: [],
       },
     ],
-  },
+  }
+  
 };
 
 const blog = {
@@ -218,75 +294,61 @@ const gallery = {
   // Images from https://pexels.com
   images: [
     {
-      src: "/images/Project Screenshots/BestBid/Screenshot 2025-03-16 041345.png",
+      src: "/images/gallery/img-01.jpeg",
+      alt: "Picture of me attended salesforce conference 2023",
+      orientation: "vertical",
+    },
+    {
+      src: "/images/gallery/img-02.jpeg",
+      alt: "image",
+      orientation: "horizontal",
+    },
+    {
+      src: "/images/gallery/img-03.jpeg",
       alt: "image",
       orientation: "vertical",
     },
     {
-      src: "/images/gallery/img-02.jpg",
+      src: "/images/gallery/img-04.jpeg",
       alt: "image",
       orientation: "horizontal",
     },
     {
-      src: "/images/gallery/img-03.jpg",
+      src: "/images/gallery/img-05.jpeg",
+      alt: "image",
+      orientation: "horizontal",
+    },
+    {
+      src: "/images/gallery/img-06.jpeg",
       alt: "image",
       orientation: "vertical",
     },
     {
-      src: "/images/gallery/img-04.jpg",
+      src: "/images/gallery/img-07.jpeg",
       alt: "image",
       orientation: "horizontal",
     },
     {
-      src: "/images/gallery/img-05.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/img-06.jpg",
+      src: "/images/gallery/img-08.jpeg",
       alt: "image",
       orientation: "vertical",
     },
     {
-      src: "/images/gallery/img-07.jpg",
+      src: "/images/gallery/img-09.jpeg",
       alt: "image",
       orientation: "horizontal",
     },
     {
-      src: "/images/gallery/img-08.jpg",
+      src: "/images/gallery/img-10.jpeg",
+      alt: "image",
+      orientation: "horizontal",
+    },
+    {
+      src: "/images/gallery/img-11.jpeg",
       alt: "image",
       orientation: "vertical",
     },
-    {
-      src: "/images/gallery/img-09.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/img-10.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/img-11.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/img-12.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/img-13.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/img-14.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
+    
   ],
 };
 

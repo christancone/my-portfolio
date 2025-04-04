@@ -116,7 +116,8 @@ export default function About() {
           >
             <Avatar src={person.avatar} size="xl" />
             <Flex gap="8" vertical="center">
-              <Icon onBackground="accent-weak" name="globe" />
+            <img src="https://flagcdn.com/w40/lk.png" alt="Sri Lanka" width="24" height="12" />
+
               {person.location}
             </Flex>
             {person.languages.length > 0 && (

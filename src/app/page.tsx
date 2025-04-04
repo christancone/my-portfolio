@@ -1,12 +1,18 @@
 import React from "react";
+import {
+  Heading,
+  Flex,
+  Text,
+  Button,
+  Avatar,
+  RevealFx,
+  Column,
+} from "@/once-ui/components";
 
-import { Heading, Flex, Text, Button, Avatar, RevealFx, Arrow, Column } from "@/once-ui/components";
-import { Projects } from "@/components/work/Projects";
-
-import { baseURL, routes } from "@/app/resources";
-import { home, about, person, newsletter } from "@/app/resources/content";
-import { Mailchimp } from "@/components";
-import { Posts } from "@/components/blog/Posts";
+import { baseURL } from "@/app/resources";
+import { home, about, person } from "@/app/resources/content";
+import { getAllProjectImages } from "@/app/utils/getProjectImages";
+import { Slideshow } from "@/components/Slideshow"; // 🔥 Make sure this path is correct
 
 export async function generateMetadata() {
   const title = home.title;
@@ -37,7 +43,9 @@ export async function generateMetadata() {
   };
 }
 
-export default function Home() {
+export default async function Home() {
+  const slideshowImages = getAllProjectImages(); // ✅ Get images dynamically
+
   return (
     <Column maxWidth="m" gap="xl" horizontal="center">
       <script
@@ -97,23 +105,11 @@ export default function Home() {
           </RevealFx>
         </Column>
       </Column>
+
+      {/* 🔥 Slideshow inserted here */}
       <RevealFx translateY="16" delay={0.6}>
-        <Projects range={[1, 1]} />
+        <Slideshow images={slideshowImages} interval={3500} />
       </RevealFx>
-      {routes["/blog"] && (
-        <Flex fillWidth gap="24" mobileDirection="column">
-          <Flex flex={1} paddingLeft="l">
-            <Heading as="h2" variant="display-strong-xs" wrap="balance">
-              Latest from the blog
-            </Heading>
-          </Flex>
-          <Flex flex={3} paddingX="20">
-            <Posts range={[1, 2]} columns="2" />
-          </Flex>
-        </Flex>
-      )}
-      <Projects range={[2]} />
-      {newsletter.display && <Mailchimp newsletter={newsletter} />}
     </Column>
   );
 }
