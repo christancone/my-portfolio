@@ -1,0 +1,44 @@
+/* Responsive styles for home page */
+.responsiveHeading {
+  @media (--s) {
+    font-size: 2.5rem !important;
+    line-height: 1.1 !important;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 2rem !important;
+    line-height: 1.2 !important;
+  }
+}
+
+.responsiveSubline {
+  @media (--s) {
+    font-size: 1.25rem !important;
+    line-height: 1.4 !important;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 1.1rem !important;
+    line-height: 1.5 !important;
+  }
+}
+
+.responsiveButton {
+  @media (--s) {
+    padding: 0.75rem 1.5rem !important;
+    font-size: 0.9rem !important;
+  }
+  
+  @media (max-width: 480px) {
+    padding: 0.625rem 1.25rem !important;
+    font-size: 0.85rem !important;
+    width: 100% !important;
+    justify-content: center !important;
+  }
+}
+
+.buttonText {
+  @media (max-width: 480px) {
+    font-size: 0.85rem !important;
+  }
+} 

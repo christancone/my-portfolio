@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { Flex, Column, Button, Text } from "@/once-ui/components";
+import styles from "./Slideshow.module.scss";
 
 interface SlideshowProps {
   images: string[];
@@ -25,38 +26,42 @@ export const Slideshow: React.FC<SlideshowProps> = ({ images, interval = 3000 })
   if (!images.length) return null;
 
   return (
-    <Column gap="l" horizontal="center">
-      <Text variant="heading-strong-l" wrap="balance" align="center">
+    <Column gap="l" horizontal="center" fillWidth>
+      <Text 
+        variant="heading-strong-l" 
+        wrap="balance" 
+        align="center"
+        className={styles.slideshowTitle}
+      >
         Take a look into my works
       </Text>
 
-      <Flex fillWidth horizontal="center">
-  <div
-    style={{
-      position: "relative",
-      width: "1100px",
-      maxWidth: "960px",
-      height: "540px", // 16:9 aspect ratio
-      borderRadius: "1rem",
-      overflow: "hidden",
-      boxShadow: "0 4px 20px rgba(0,0,0,0.1)",
-    }}
-  >
-    <Image
-      src={images[index]}
-      alt={`Slideshow Image ${index + 1}`}
-      fill
-      style={{ objectFit: "cover", transition: "0.5s ease-in-out" }}
-    />
-  </div>
-</Flex>
+      <Flex fillWidth horizontal="center" paddingX="s">
+        <div className={styles.slideshowContainer}>
+          <Image
+            src={images[index]}
+            alt={`Slideshow Image ${index + 1}`}
+            fill
+            style={{ objectFit: "cover", transition: "0.5s ease-in-out" }}
+          />
+        </div>
+      </Flex>
 
-
-      <Flex gap="1" horizontal="center">
-        <Button size="s" variant="secondary" onClick={goPrev}>
+      <Flex gap="m" horizontal="center" className={styles.buttonContainer}>
+        <Button 
+          size="s" 
+          variant="secondary" 
+          onClick={goPrev}
+          className={styles.navButton}
+        >
           ⬅ Previous
         </Button>
-        <Button size="s" variant="secondary" onClick={goNext}>
+        <Button 
+          size="s" 
+          variant="secondary" 
+          onClick={goNext}
+          className={styles.navButton}
+        >
           Next ➡
         </Button>
       </Flex>

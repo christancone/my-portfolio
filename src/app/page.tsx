@@ -13,6 +13,7 @@ import { baseURL } from "@/app/resources";
 import { home, about, person } from "@/app/resources/content";
 import { getAllProjectImages } from "@/app/utils/getProjectImages";
 import { Slideshow } from "@/components/Slideshow"; // 🔥 Make sure this path is correct
+import styles from "./page.module.scss";
 
 export async function generateMetadata() {
   const title = home.title;
@@ -47,7 +48,7 @@ export default async function Home() {
   const slideshowImages = getAllProjectImages(); // ✅ Get images dynamically
 
   return (
-    <Column maxWidth="m" gap="xl" horizontal="center">
+    <Column maxWidth="m" gap="xl" horizontal="center" paddingX="m">
       <script
         type="application/ld+json"
         suppressHydrationWarning
@@ -71,14 +72,23 @@ export default async function Home() {
         }}
       />
       <Column fillWidth paddingY="l" gap="m">
-        <Column maxWidth="s">
+        <Column maxWidth="s" paddingX="s">
           <RevealFx translateY="4" fillWidth horizontal="start" paddingBottom="m">
-            <Heading wrap="balance" variant="display-strong-l">
+            <Heading 
+              wrap="balance" 
+              variant="display-strong-l"
+              className={styles.responsiveHeading}
+            >
               {home.headline}
             </Heading>
           </RevealFx>
           <RevealFx translateY="8" delay={0.2} fillWidth horizontal="start" paddingBottom="m">
-            <Text wrap="balance" onBackground="neutral-weak" variant="heading-default-xl">
+            <Text 
+              wrap="balance" 
+              onBackground="neutral-weak" 
+              variant="heading-default-xl"
+              className={styles.responsiveSubline}
+            >
               {home.subline}
             </Text>
           </RevealFx>
@@ -90,6 +100,7 @@ export default async function Home() {
               variant="secondary"
               size="m"
               arrowIcon
+              className={styles.responsiveButton}
             >
               <Flex gap="8" vertical="center">
                 {about.avatar.display && (
@@ -99,7 +110,7 @@ export default async function Home() {
                     size="m"
                   />
                 )}
-                {about.title}
+                <span className={styles.buttonText}>{about.title}</span>
               </Flex>
             </Button>
           </RevealFx>
@@ -107,7 +118,7 @@ export default async function Home() {
       </Column>
 
       {/* 🔥 Slideshow inserted here */}
-      <RevealFx translateY="16" delay={0.6}>
+      <RevealFx translateY="16" delay={0.6} fillWidth>
         <Slideshow images={slideshowImages} interval={3500} />
       </RevealFx>
     </Column>

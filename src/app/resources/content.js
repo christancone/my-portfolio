@@ -300,52 +300,52 @@ const gallery = {
     },
     {
       src: "/images/gallery/img-02.jpeg",
-      alt: "image",
+      alt: "Lazarus 2.0 Ideathon Finalists @SLIIT",
       orientation: "horizontal",
     },
     {
       src: "/images/gallery/img-03.jpeg",
-      alt: "image",
+      alt: "Google I/O Extended Developers Conference Colombo 2023",
       orientation: "vertical",
     },
     {
       src: "/images/gallery/img-04.jpeg",
-      alt: "image",
+      alt: "Lazarus 2.0 Ideathon Finals @SLIIT",
       orientation: "horizontal",
     },
     {
       src: "/images/gallery/img-05.jpeg",
-      alt: "image",
-      orientation: "horizontal",
+      alt: "Picture of me attended salesforce conference 2023",
+      orientation: "vertical",
     },
     {
       src: "/images/gallery/img-06.jpeg",
-      alt: "image",
+      alt: "UWU Robot Battles 2.0: Death Race 2024 Finals - Team",
       orientation: "vertical",
     },
     {
       src: "/images/gallery/img-07.jpeg",
-      alt: "image",
+      alt: "Our Robot 'rootQuarks' on action @ UWU Robot Battles 2.0: Death Race 2024",
       orientation: "horizontal",
     },
     {
       src: "/images/gallery/img-08.jpeg",
-      alt: "image",
+      alt: "Networked with a QA in salesforce conference 2023",
       orientation: "vertical",
     },
     {
       src: "/images/gallery/img-09.jpeg",
-      alt: "image",
+      alt: "The Team of salesforce conference 2023",
       orientation: "horizontal",
     },
     {
       src: "/images/gallery/img-10.jpeg",
-      alt: "image",
+      alt: "MazeMaster - MazeSolving Robot Challenge - Runners Up",
       orientation: "horizontal",
     },
     {
       src: "/images/gallery/img-11.jpeg",
-      alt: "image",
+      alt: "MazeMaster - MazeSolving Robot Challenge - Team",
       orientation: "vertical",
     },
     

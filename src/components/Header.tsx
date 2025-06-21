@@ -11,7 +11,7 @@ import { person, home, about, blog, work, gallery } from "@/app/resources/conten
 
 type TimeDisplayProps = {
   timeZone: string;
-  locale?: string; // Optionally allow locale, defaulting to 'en-GB'
+  locale?: string;
 };
 
 const TimeDisplay: React.FC<TimeDisplayProps> = ({ timeZone, locale = "en-GB" }) => {
@@ -58,10 +58,16 @@ export const Header = () => {
         padding="8"
         horizontal="center"
       >
-        <Flex paddingLeft="12" fillWidth vertical="center" textVariant="body-default-s">
+        <Flex 
+          paddingLeft="12" 
+          fillWidth 
+          vertical="center" 
+          textVariant="body-default-s"
+          className={styles.locationContainer}
+        >
           {display.location && <Flex hide="s">{person.location}</Flex>}
         </Flex>
-        <Flex fillWidth horizontal="center">
+        <Flex fillWidth horizontal="center" className={styles.navContainer}>
           <Flex
             background="surface"
             border="neutral-medium"
@@ -69,12 +75,13 @@ export const Header = () => {
             shadow="l"
             padding="4"
             horizontal="center"
+            className={styles.navWrapper}
           >
-            <Flex gap="4" vertical="center" textVariant="body-default-s">
+            <Flex gap="4" vertical="center" textVariant="body-default-s" className={styles.navButtons}>
               {routes["/"] && (
                 <ToggleButton prefixIcon="home" href="/" selected={pathname === "/"} />
               )}
-              <Line vert maxHeight="24" />
+              <Line vert maxHeight="24" className={styles.navDivider} />
               {routes["/about"] && (
                 <>
                   <ToggleButton
@@ -146,7 +153,12 @@ export const Header = () => {
             </Flex>
           </Flex>
         </Flex>
-        <Flex fillWidth horizontal="end" vertical="center">
+        <Flex 
+          fillWidth 
+          horizontal="end" 
+          vertical="center"
+          className={styles.timeContainer}
+        >
           <Flex
             paddingRight="12"
             horizontal="end"

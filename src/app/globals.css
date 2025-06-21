@@ -1,0 +1,71 @@
+/* Global responsive styles */
+.main-content {
+  @media (--s) {
+    padding: 1rem 0.75rem !important;
+  }
+  
+  @media (max-width: 480px) {
+    padding: 0.75rem 0.5rem !important;
+  }
+}
+
+/* Ensure proper viewport meta tag behavior */
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+/* Improve touch targets on mobile */
+button, 
+[role="button"],
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+  @media (--s) {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+/* Improve text readability on mobile */
+body {
+  @media (--s) {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* Prevent horizontal scroll on mobile */
+body, html {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* Improve image handling on mobile */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Better focus indicators for accessibility */
+button:focus,
+a:focus,
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 2px solid var(--brand-background-strong);
+  outline-offset: 2px;
+}
+
+/* Responsive typography adjustments */
+@media (--s) {
+  h1, h2, h3, h4, h5, h6 {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+  
+  p, span, div {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+} 

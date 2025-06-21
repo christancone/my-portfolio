@@ -5,3 +5,71 @@
         align-items: center;
     }
 }
+
+.mobile {
+    @media (--s) {
+        flex-direction: column !important;
+        gap: 1rem !important;
+        padding: 1rem 0.75rem !important;
+        text-align: center;
+    }
+    
+    @media (max-width: 480px) {
+        padding: 0.75rem 0.5rem !important;
+        gap: 0.75rem !important;
+    }
+}
+
+.copyright {
+    @media (--s) {
+        font-size: 0.85rem !important;
+        line-height: 1.4 !important;
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+        align-items: center;
+    }
+    
+    @media (max-width: 480px) {
+        font-size: 0.8rem !important;
+    }
+}
+
+.name {
+    @media (--s) {
+        padding: 0 0.25rem !important;
+    }
+}
+
+.rights {
+    @media (--s) {
+        font-size: 0.85rem !important;
+    }
+    
+    @media (max-width: 480px) {
+        font-size: 0.8rem !important;
+    }
+}
+
+.socialLinks {
+    @media (--s) {
+        gap: 0.75rem !important;
+        justify-content: center;
+    }
+    
+    @media (max-width: 480px) {
+        gap: 0.5rem !important;
+    }
+}
+
+.socialButton {
+    @media (--s) {
+        min-width: 44px;
+        min-height: 44px;
+    }
+    
+    @media (max-width: 480px) {
+        min-width: 40px;
+        min-height: 40px;
+    }
+}

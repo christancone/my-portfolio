@@ -9,6 +9,7 @@ import {
   SmartLink,
   Text,
 } from "@/once-ui/components";
+import styles from "./ProjectCard.module.scss";
 
 interface ProjectCardProps {
   href: string;
@@ -31,13 +32,14 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
   link,
 }) => {
   return (
-    <Column fillWidth gap="m">
+    <Column fillWidth gap="m" className={styles.projectCard}>
       <Carousel
         sizes="(max-width: 960px) 100vw, 960px"
         images={images.map((image) => ({
           src: image,
           alt: title,
         }))}
+        className={styles.carousel}
       />
       <Flex
         mobileDirection="column"
@@ -46,28 +48,47 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
         paddingTop="12"
         paddingBottom="24"
         gap="l"
+        className={styles.content}
       >
         {title && (
-          <Flex flex={5}>
-            <Heading as="h2" wrap="balance" variant="heading-strong-xl">
+          <Flex flex={5} className={styles.titleContainer}>
+            <Heading 
+              as="h2" 
+              wrap="balance" 
+              variant="heading-strong-xl"
+              className={styles.title}
+            >
               {title}
             </Heading>
           </Flex>
         )}
         {(avatars?.length > 0 || description?.trim() || content?.trim()) && (
-          <Column flex={7} gap="16">
-            {avatars?.length > 0 && <AvatarGroup avatars={avatars} size="m" reverse />}
+          <Column flex={7} gap="16" className={styles.details}>
+            {avatars?.length > 0 && (
+              <AvatarGroup 
+                avatars={avatars} 
+                size="m" 
+                reverse 
+                className={styles.avatars}
+              />
+            )}
             {description?.trim() && (
-              <Text wrap="balance" variant="body-default-s" onBackground="neutral-weak">
+              <Text 
+                wrap="balance" 
+                variant="body-default-s" 
+                onBackground="neutral-weak"
+                className={styles.description}
+              >
                 {description}
               </Text>
             )}
-            <Flex gap="24" wrap>
+            <Flex gap="24" wrap className={styles.links}>
               {content?.trim() && (
                 <SmartLink
                   suffixIcon="arrowRight"
                   style={{ margin: "0", width: "fit-content" }}
                   href={href}
+                  className={styles.link}
                 >
                   <Text variant="body-default-s">Read case study</Text>
                 </SmartLink>
@@ -77,6 +98,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
                   suffixIcon="arrowUpRightFromSquare"
                   style={{ margin: "0", width: "fit-content" }}
                   href={link}
+                  className={styles.link}
                 >
                   <Text variant="body-default-s">View project</Text>
                 </SmartLink>
