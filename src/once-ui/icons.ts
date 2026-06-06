@@ -23,6 +23,16 @@ import {
   HiArrowRight,
   HiOutlineEye,
   HiOutlineEyeSlash,
+  HiOutlineServerStack,
+  HiOutlineCloud,
+  HiOutlineCpuChip,
+  HiOutlineCodeBracket,
+  HiOutlineRocketLaunch,
+  HiOutlineBeaker,
+  HiOutlineSparkles,
+  HiOutlineCircleStack,
+  HiOutlineCommandLine,
+  HiOutlineSquares2X2,
 } from "react-icons/hi2";
 
 import {
@@ -70,4 +80,14 @@ export const iconLibrary: Record<string, IconType> = {
   clipboard: HiClipboard,
   arrowUpRightFromSquare: HiArrowTopRightOnSquare,
   fiverr: SiFiverr,
+  server: HiOutlineServerStack,
+  cloud: HiOutlineCloud,
+  cpu: HiOutlineCpuChip,
+  code: HiOutlineCodeBracket,
+  rocket: HiOutlineRocketLaunch,
+  beaker: HiOutlineBeaker,
+  sparkles: HiOutlineSparkles,
+  database: HiOutlineCircleStack,
+  terminal: HiOutlineCommandLine,
+  layers: HiOutlineSquares2X2,
 };
